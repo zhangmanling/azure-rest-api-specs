@@ -39,7 +39,7 @@
       "get": {
         "description": "Gets the current state of the specified Analysis Services server",
         "tags": [ "RpProvision" ],
-        "operationId": "RpProvision_GetDetailsAsync",
+        "operationId": "RpProvision_GetServerDetails",
         "parameters": [
           {
             "name": "analysisServerName",
@@ -69,7 +69,7 @@
       "put": {
         "description": "Updates the current state of the specified Analysis Services server as specified by the request body",
         "tags": [ "RpProvision" ],
-        "operationId": "RpProvision_ProvisionAsync",
+        "operationId": "RpProvision_ProvisionServer",
         "parameters": [
           {
             "name": "provisionRequest",
@@ -111,7 +111,7 @@
       "delete": {
         "description": "Deletes the specified Analysis Services server.",
         "tags": [ "RpProvision" ],
-        "operationId": "RpProvision_DeprovisionAsync",
+        "operationId": "RpProvision_DeprovisionServer",
         "parameters": [
           {
             "name": "analysisServerName",
@@ -145,7 +145,7 @@
       "patch": {
         "description": "Updates the current state of the specified Analysis Services server as specified by the request body",
         "tags": [ "RpProvision" ],
-        "operationId": "RpProvision_UpdateDetailsAsync",
+        "operationId": "RpProvision_UpdateServerDetails",
         "parameters": [
           {
             "name": "analysisServerName",
@@ -185,7 +185,7 @@
       "get": {
         "description": "Gets all the Analysis Services servers for the given resource group",
         "tags": [ "RpProvision" ],
-        "operationId": "RpProvision_ListAllServersForResourceGroupAsync",
+        "operationId": "RpProvision_ListServersByResourceGroup",
         "parameters": [
           {
             "$ref": "#/parameters/ResourceGroupNameParameter"
@@ -209,7 +209,7 @@
       "get": {
         "description": "List all the Analysis Services servers for the given subscription",
         "tags": [ "RpProvision" ],
-        "operationId": "RpProvision_ListAllServersForSubscriptionAsync",
+        "operationId": "RpProvision_ListServers",
         "parameters": [
           {
             "$ref": "#/parameters/ApiVersionParameter"
@@ -230,7 +230,7 @@
       "get": {
         "description": "Gets result of the specified operation. The API return the HTTP status code and a response body",
         "tags": [ "RpProxy" ],
-        "operationId": "RpProxy_GetOperationStatusAsync",
+        "operationId": "RpProxy_GetOperationStatus",
         "parameters": [
           {
             "name": "operationId",
@@ -271,7 +271,7 @@
       "get": {
         "description": "Gets result of the specified operation. The API return only the HTTP status code and does not have a response body",
         "tags": [ "RpProxy" ],
-        "operationId": "RpProxy_GetOperationResultAsync",
+        "operationId": "RpProxy_GetOperationResult",
         "parameters": [
           {
             "name": "operationId",
@@ -491,7 +491,7 @@
       }
     },
     "OperationDetail": {
-      "description": "Details of the async operation specified by the operation id",
+      "description": "Details of the operation specified by the operation id",
       "type": "object",
       "properties": {
         "id": {
